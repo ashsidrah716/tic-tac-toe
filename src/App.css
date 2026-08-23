@@ -1,0 +1,123 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #23272f;
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+h1 {
+    text-align: center;
+    /* background-color: blueviolet; */
+}
+
+.board {
+    margin-top: 4rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: min(90vw, 300px);
+    cursor: pointer;
+    position: relative;
+    /* background-color: grey; */
+}
+
+.tile {
+    aspect-ratio: 1;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.right-border {
+    border-right: 0.3rem solid #0074a6;
+}
+
+.bottom-border {
+    border-bottom: 0.3rem solid #0074a6;
+}
+
+.x-hover:hover::after {
+    content: "X";
+    opacity: 0.4;
+}
+
+.o-hover:hover::after {
+    content: "O";
+    opacity: 0.4;
+}
+
+.strike {
+    position: absolute;
+    background-color: darkorange;
+}
+
+.strike-row-1 {
+    width: 100%;
+    height: 4px;
+    top: 16%;
+}
+
+.strike-row-2 {
+    width: 100%;
+    height: 4px;
+    top: 49%;
+}
+
+.strike-row-3 {
+    width: 100%;
+    height: 4px;
+    top: 83%;
+}
+
+.strike-column-1 {
+    height: 100%;
+    width: 4px;
+    left: 16%;
+}
+
+.strike-column-2 {
+    height: 100%;
+    width: 4px;
+    left: 50.5%;
+}
+
+.strike-column-3 {
+    height: 100%;
+    width: 4px;
+    left: 84.5%;
+}
+
+.strike-diagnol-1 {
+    width: 90%;
+    height: 4px;
+    top: 50%;
+    left: 6.7%;
+    transform: skewY(45deg);
+}
+
+.strike-diagnol-2 {
+    width: 90%;
+    height: 4px;
+    top: 50%;
+    left: 5%;
+    transform: skewY(-45deg);
+}
+
+.game-over {
+    text-align: center;
+    border: 8px dotted #5468ff;
+    padding: 1rem;
+    margin-top: 50px;
+    font-size: 1.5rem;
+}
+
+.reset-button {
+    margin-top: 50px;
+    padding: 20px;
+    background-color: #0074a6;
+    color: white;
+    width: 100%;
+    font-size: 1.5rem;
+}
